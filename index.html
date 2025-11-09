@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+
+    <section class="header">
+      <header>
+        <div class="logo">
+          <svg
+            class="w-5 h-5 text-white"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M21 21H3V3h9V1H3a2 2 0 00-2 2v18a2 2 0 002 2h18a2 2 0 002-2v-9h-2v9z"
+            ></path>
+          </svg>
+          <h1>Developer Finder</h1>
+        </div>
+        <div class="words">
+          <p>Search for StackOverflow users by username</p>
+        </div>
+      </header>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search">
+      <form class="search-form">
+        <input type="text" placeholder="Enter StackOverflow username" id="username-input" />
+        <button type="submit" id="search-button">Search</button>
+      </form>
+      <div class="search-words">
+        <div>
+          <div class="search-form-item">
+            <svg
+              class="w-12 h-12 text-slate-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="search-words-item">
+          <p>Search for StackOverflow users to get started</p>
+        </div>
+        <div class="search-words-item">
+          <p>Enter a username to discover developer profiles and their stats</p>
+        </div>
+      </div>
+      <div id="card" class="card">
+        <div class="card-content">
+          <div class="card-user-info">
+            <img
+              alt="Pham Duy Quang Huy 123123a"
+              class="card-avatar"
+              src="https://www.gravatar.com/avatar/08de120ff98072ec40c2622802f89ea7?s=256&amp;d=identicon&amp;r=PG&amp;f=y&amp;so-version=2"
+            />
+            <div class="card-user-info-content">
+              <h3 class="card-user-name">Pham Duy Quang Huy 123123a</h3>
+              <p class="card-user-location">📍 Switzerland</p>
+            </div>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">Reputation</p>
+            <p class="card-stat-value">1</p>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-award w-3 h-3"
+              >
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                ></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+              Badges
+            </p>
+            <div class="card-badges">
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">17</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">106</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">167</span>
+              </div>
+            </div>
+          </div>
+          <button data-slot="button" class="card-button">
+            View Profile<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="card-icon"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-user-info">
+            <img
+              alt="Pham Duy Quang Huy 123123a"
+              class="card-avatar"
+              src="https://www.gravatar.com/avatar/08de120ff98072ec40c2622802f89ea7?s=256&amp;d=identicon&amp;r=PG&amp;f=y&amp;so-version=2"
+            />
+            <div class="card-user-info-content">
+              <h3 class="card-user-name">Pham Duy Quang Huy 123123a</h3>
+              <p class="card-user-location">📍 Switzerland</p>
+            </div>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">Reputation</p>
+            <p class="card-stat-value">1</p>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-award w-3 h-3"
+              >
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                ></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+              Badges
+            </p>
+            <div class="card-badges">
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">17</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">106</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">167</span>
+              </div>
+            </div>
+          </div>
+          <button data-slot="button" class="card-button">
+            View Profile<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="card-icon"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="card-content">
+          <div class="card-user-info">
+            <img
+              alt="Pham Duy Quang Huy 123123a"
+              class="card-avatar"
+              src="https://www.gravatar.com/avatar/08de120ff98072ec40c2622802f89ea7?s=256&amp;d=identicon&amp;r=PG&amp;f=y&amp;so-version=2"
+            />
+            <div class="card-user-info-content">
+              <h3 class="card-user-name">Pham Duy Quang Huy 123123a</h3>
+              <p class="card-user-location">📍 Switzerland</p>
+            </div>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">Reputation</p>
+            <p class="card-stat-value">1</p>
+          </div>
+          <div class="card-user-stat">
+            <p class="card-stat-title">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-award w-3 h-3"
+              >
+                <path
+                  d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                ></path>
+                <circle cx="12" cy="8" r="6"></circle>
+              </svg>
+              Badges
+            </p>
+            <div class="card-badges">
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">17</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">106</span>
+              </div>
+              <div class="card-badge">
+                <div class="card-badge-icon"></div>
+                <span class="card-badge-value">167</span>
+              </div>
+            </div>
+          </div>
+          <button data-slot="button" class="card-button">
+            View Profile<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="card-icon"
+            >
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path
+                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

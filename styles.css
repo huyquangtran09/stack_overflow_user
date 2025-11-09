@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geist", sans-serif;
+}
+
+body {
+  background-color: #0f172b;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  padding: 24px 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: color-mix(
+    in oklab,
+    lab(1.76974% 1.32743 -9.28855) 50%,
+    transparent
+  );
+}
+
+.header header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo svg {
+  color: #ff8904;
+  width: 24px;
+  height: 24px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.words p {
+  color: #90a1b9;
+  font-size: 14px;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 24px;
+  padding: 48px 16px;
+  background: #1d293d;
+}
+
+.search-form {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.search-form input {
+  flex: 1;
+  background: #1d293d;
+  border: 1px solid #314158;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #e2e8f0;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-form input::placeholder {
+  color: #fff;
+}
+
+.search-form input:focus {
+  border-color: #f97316;
+}
+
+.search-form button {
+  background-color: #f97316;
+  border: none;
+  color: white;
+  padding: 0 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #fb923c;
+}
+
+/* Search words section */
+.search-words {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 48px;
+  padding: 60px 0;
+  display: none;
+}
+
+.search-form-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-form-item svg {
+  width: 56px;
+  height: 56px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.search-words-item p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.search-words-item p:last-child {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.card {
+  display: flex;
+  gap: 24px;
+  justify-content: start;
+  width: 100%;
+}
+
+.card .card-content {
+  padding: 24px;
+  border: 1px solid #314158;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card img {
+  border-radius: 10px;
+  max-width: 64px;
+}
+
+.card-content .card-user-info {
+  display: flex;
+  gap: 12px;
+}
+
+.card-content .card-user-stat {
+  display: flex;
+  border: 1px solid #314158;
+  background: #162034;
+  border-radius: 10px;
+  padding: 12px;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.card-content .card-button {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  background-color: #314158;
+  color: #fff;
+  border: 1px solid #62748e;
+  border-radius: 8px;
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content .card-stat-value {
+  color: #ff8904;
+}
+
+.card-content .card-stat-title {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.card-content .card-badge-icon {
+  display: flex;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff8904;
+}
+
+.card-content .card-badges {
+  display: flex;
+  gap: 12px;
+}
