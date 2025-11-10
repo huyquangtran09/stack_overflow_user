@@ -143,10 +143,13 @@ body {
 }
 
 .card {
-  display: flex;
+  display: grid;
   gap: 24px;
-  justify-content: start;
+  justify-items: center;
+  grid-template-columns: auto auto auto;
   width: 100%;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card .card-content {

@@ -17,7 +17,7 @@ searchButton.addEventListener("click", (event) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      renderUI(data);
+      renderUI(data, username);
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -25,9 +25,17 @@ searchButton.addEventListener("click", (event) => {
 });
 
 //viết hàm renderUI vào card
-const renderUI = (data) => {
-  const user = data.items[0];
-  card.innerHTML = `
+const renderUI = (data, username) => {
+  const user = data.items;
+  if (user.length === 0) {
+    card.innerHTML = `
+      <p>No found user "${username}"</p>
+    `;
+    return;
+  }
+  const userHTML = user
+    .map(
+      (user) => `
     <div class="card-content">
           <div class="card-user-info">
             <img
@@ -37,7 +45,9 @@ const renderUI = (data) => {
             />
             <div class="card-user-info-content">
               <h3 class="card-user-name">${user.display_name}</h3>
-              <p class="card-user-location">📍 ${user.location}</p>
+              <p class="card-user-location">${
+                user.location ? `📍 ${user.location}` : ""
+              }</p>
             </div>
           </div>
           <div class="card-user-stat">
@@ -68,15 +78,21 @@ const renderUI = (data) => {
             <div class="card-badges">
               <div class="card-badge">
                 <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${user.badge_counts.gold}</span>  
+                <span class="card-badge-value">${
+                  user.badge_counts.gold
+                }</span>  
               </div>
               <div class="card-badge">
                 <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${user.badge_counts.silver}</span>
+                <span class="card-badge-value">${
+                  user.badge_counts.silver
+                }</span>
               </div>
               <div class="card-badge">
                 <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${user.badge_counts.bronze}</span>   
+                <span class="card-badge-value">${
+                  user.badge_counts.bronze
+                }</span>   
               </div>
             </div>
           </div>
@@ -101,5 +117,8 @@ const renderUI = (data) => {
             </svg>
           </button>
         </div>
-  `;
+    `
+    )
+    .join("");
+  card.innerHTML = userHTML;
 };
