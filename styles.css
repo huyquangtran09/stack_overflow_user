@@ -198,6 +198,8 @@ body {
 
 .card-content .card-stat-value {
   color: #ff8904;
+  font-weight: 700;
+  font-size: 24px;
 }
 
 .card-content .card-stat-title {
@@ -212,10 +214,40 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ff8904;
+}
+
+.card-badge:nth-child(1) .card-badge-icon {
+  background-color: gold;
+}
+.card-badge:nth-child(1) .card-badge-value {
+  color: gold;
+  font-weight: 500;
+  font-size: 14px;
+}
+.card-badge:nth-child(2) .card-badge-icon {
+  background-color: silver;
+}
+.card-badge:nth-child(2) .card-badge-value {
+  color: silver;
+  font-weight: 500;
+  font-size: 14px;
+}
+.card-badge:nth-child(3) .card-badge-icon {
+  background-color: #f54a00;
+}
+.card-badge:nth-child(3) .card-badge-value {
+  color: #f54a00;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .card-content .card-badges {
   display: flex;
   gap: 12px;
+}
+
+.card-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
