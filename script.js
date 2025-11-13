@@ -1,16 +1,28 @@
 const usernameInput = document.getElementById("username-input");
 const searchButton = document.getElementById("search-button");
+const searchWords = document.getElementById("search-words");
 const card = document.getElementById("card");
+const emptyState = document.getElementById("empty-state");
 // Add event listener "input" to usernameInput
 usernameInput.addEventListener("input", () => {
   const username = usernameInput.value.trim();
   console.log(username);
 });
 
+card.style.display = "none";
+searchWords.style.display = "block";
+
 // Add event listener "onclick" to searchButton
 searchButton.addEventListener("click", (event) => {
   event.preventDefault();
   const username = usernameInput.value.trim();
+  //Nếu input rỗng thì quay lại trang thái ban đầu
+  if (username === "") {
+    card.style.display = "none";
+    searchWords.style.display = "block";
+    return;
+  }
+
   //viết hàm call API với link https://api.stackexchange.com/2.3/users?order=desc&sort=reputation&inname=${username}&site=stackoverflow
   const apiUrl = `https://api.stackexchange.com/2.3/users?order=desc&sort=reputation&inname=${username}&site=stackoverflow`;
   fetch(apiUrl)
@@ -18,6 +30,8 @@ searchButton.addEventListener("click", (event) => {
     .then((data) => {
       console.log(data);
       renderUI(data, username);
+      searchWords.style.display = "none";
+      card.style.display = "grid";
     })
     .catch((error) => {
       console.error("Error:", error);

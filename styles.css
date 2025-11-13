@@ -115,7 +115,6 @@ body {
   gap: 10px;
   margin-top: 48px;
   padding: 60px 0;
-  display: none;
 }
 
 .search-form-item {
@@ -150,6 +149,7 @@ body {
   width: 100%;
   gap: 20px;
   padding: 20px;
+  display: none;
 }
 
 .card .card-content {
