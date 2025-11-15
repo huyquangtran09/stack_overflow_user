@@ -90,24 +90,30 @@ const renderUI = (data, username) => {
               Badges
             </p>
             <div class="card-badges">
-              <div class="card-badge">
-                <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${
-                  user.badge_counts.gold
-                }</span>  
-              </div>
-              <div class="card-badge">
-                <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${
-                  user.badge_counts.silver
-                }</span>
-              </div>
-              <div class="card-badge">
-                <div class="card-badge-icon"></div>
-                <span class="card-badge-value">${
-                  user.badge_counts.bronze
-                }</span>   
-              </div>
+             ${
+               user.badge_counts.gold
+                 ? `<div class="card-badge">
+                    <div class="card-badge-icon"></div>
+                    <span class="card-badge-value">${user.badge_counts.gold}</span>  
+                  </div>`
+                 : ""
+             }
+              ${
+                user.badge_counts.silver
+                  ? `<div class="card-badge">
+                    <div class="card-badge-icon"></div>
+                    <span class="card-badge-value">${user.badge_counts.silver}</span>
+                  </div>`
+                  : ""
+              }
+              ${
+                user.badge_counts.bronze
+                  ? `<div class="card-badge">
+                    <div class="card-badge-icon"></div>
+                    <span class="card-badge-value">${user.badge_counts.bronze}</span>
+                  </div>`
+                  : ""
+              }
             </div>
           </div>
           <button data-slot="button" class="card-button">
